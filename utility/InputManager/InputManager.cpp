@@ -1,0 +1,31 @@
+#include"InputManager.h"
+
+InputManager* InputManager::GetInstance()
+{
+	static InputManager instance;
+	return &instance;
+}
+
+void InputManager::BeginFlame()
+{
+	memcpy(InputManager::GetInstance()->preKeys, InputManager::GetInstance()->keys, 256);
+	Novice::GetHitKeyStateAll(InputManager::GetInstance()->keys);
+}
+
+bool InputManager::keyPressed(uint32_t preKeys)
+{
+	if (InputManager::GetInstance()->keys[preKeys] == 0 && InputManager::GetInstance()->preKeys[preKeys] != 0)
+	{
+		return true;
+	}
+	return false;
+}
+
+bool InputManager::keyHeld(uint32_t key)
+{
+	if (InputManager::GetInstance()->keys[key] == 0x80)
+	{
+		return true;
+	}
+	return false;
+}
