@@ -1,11 +1,9 @@
 #pragma once
 
-
-enum EnemyState
+enum ENEMYSTATE
 {
     LATERALMOVE,
 	VERTICALMOVE,
-	DEAD
 };
 
 class Enemy;

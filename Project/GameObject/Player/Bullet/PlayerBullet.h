@@ -16,7 +16,7 @@ public:
 
 #pragma region Get
 
-	Vector2 GetPosition() { return pos_; }
+	Vector2 GetPos() { return pos_; }
 
 	int GetSize() { return size_; }
 
@@ -24,7 +24,7 @@ public:
 
 private:
 
-	Vector2 pos_{};
+	Vector2 pos_{0,-64.0f};
 	int size_ = 16;
 	float speed_ = 5.0f;
 

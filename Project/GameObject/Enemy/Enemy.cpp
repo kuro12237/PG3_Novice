@@ -6,9 +6,8 @@ void Enemy::Initialize()
 
 	state_[LATERALMOVE] = std::make_unique<EnemyLarteralState>();
 	state_[VERTICALMOVE] = std::make_unique<EnemyVerticalState>();
-	state_[DEAD] = std::make_unique<EnemyDeadState>();
 
-	currentStateNo_ = DEAD;
+	currentStateNo_ = VERTICALMOVE;
 	state_[currentStateNo_]->Initialize();
 }
 
@@ -27,5 +26,5 @@ void Enemy::Update()
 
 void Enemy::Draw()
 {
-	Novice::DrawEllipse(static_cast<int>(pos_.x), static_cast<int>(pos_.y), size_, size_, 0.0f, color_, kFillModeSolid);
+	Novice::DrawBox(static_cast<int>(pos_.x), static_cast<int>(pos_.y), size_, size_, 0.0f, color_, kFillModeSolid);
 }

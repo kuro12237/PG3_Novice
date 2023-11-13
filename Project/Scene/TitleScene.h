@@ -1,15 +1,16 @@
 #pragma once
 #include <memory>
 
-#include"../IScene.h"
+#include"IScene.h"
 #include"Project/GameObject/Player/Player.h"
 #include"Project/GameObject/Enemy/Enemy.h"
+#include"utility/InputManager/InputManager.h"
 
-class PlayScene:public IScene
+class TitleScene :public IScene
 {
 public:
 
-	~PlayScene() {};
+	~TitleScene() {};
 
 	void Initialize()override;
 
@@ -19,8 +20,4 @@ public:
 
 private:
 
-	void CheckCollision();
-
-	std::unique_ptr<Player>player_ = nullptr;
-	std::unique_ptr<Enemy>enemy_ = nullptr;
 };

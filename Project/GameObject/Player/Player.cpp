@@ -3,6 +3,11 @@
 void Player::Initialize()
 {
 	bullet_ = std::make_unique<PlayerBullet>();
+
+	this->pos_= { 640.0f,480.0f };
+	this->size_ = 32;
+	this->color_ = 0x00ff00ff;
+
 }
 
 void Player::Update()
@@ -21,8 +26,7 @@ void Player::Update()
 void Player::Draw()
 {
 	bullet_->Draw();
-	Novice::DrawEllipse(static_cast<int>(pos_.x), static_cast<int>(pos_.y), size_, size_, 0.0f, WHITE, kFillModeSolid);
-
+	Novice::DrawBox(static_cast<int>(pos_.x), static_cast<int>(pos_.y), size_, size_, 0.0f, color_, kFillModeSolid);
 }
 
 void Player::Move()
@@ -52,6 +56,7 @@ void Player::Move()
 
 void Player::Attack()
 {
-	bullet_->Initialize(pos_);
-
+	Vector2 spownPos = pos_;
+	spownPos.x = spownPos.x + (size_ / 4);
+	bullet_->Initialize(spownPos);
 }

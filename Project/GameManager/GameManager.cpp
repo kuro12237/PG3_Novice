@@ -3,8 +3,13 @@
 GameManager::GameManager()
 {
     Novice::Initialize(kWindowTitle, 1280, 720);
-	state = new PlayScene();
-	state->Initialize();
+	scene_[TITLE] = std::make_unique<TitleScene>();
+	scene_[PLAY] = std::make_unique<PlayScene>();
+	scene_[CLEAR] = std::make_unique<GameClearScene>();
+	scene_[OVER] = std::make_unique<GameOverScene>();
+
+	currentSceneNo_ = TITLE;
+	scene_[currentSceneNo_]->Initialize();
 }
 
 GameManager::~GameManager()
@@ -18,11 +23,17 @@ int GameManager::Run()
 		Novice::BeginFrame();
 		InputManager::BeginFlame();
 
-		/// ↓更新処理ここから
-		state->Update();
+		prevSceneNo_ = currentSceneNo_;
+		currentSceneNo_ = scene_[currentSceneNo_]->GetStateNumber();
 
-		/// ↓描画処理ここから
-		state->Draw();
+		if (prevSceneNo_ != currentSceneNo_)
+		{
+			scene_[currentSceneNo_]->Initialize();
+		}
+
+		scene_[currentSceneNo_]->Update();
+
+		scene_[currentSceneNo_]->Draw();
 
 		Novice::EndFrame();
 

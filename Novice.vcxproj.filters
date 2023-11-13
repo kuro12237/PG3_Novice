@@ -26,9 +26,6 @@
     <Filter Include="Project\Scene\Title">
       <UniqueIdentifier>{c676f68d-5202-4524-ab72-f314ec0a8f5f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Project\Scene\Play">
-      <UniqueIdentifier>{4956192d-dee5-40a0-ab70-d61627450b55}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Project\Scene\Clear">
       <UniqueIdentifier>{226732bb-e5e4-4343-9ab1-a5ea9375ccc5}</UniqueIdentifier>
     </Filter>
@@ -52,6 +49,9 @@
     </Filter>
     <Filter Include="Project\GameObject\Enemy\state">
       <UniqueIdentifier>{e28e7fb7-2a02-4eb2-abe2-5f4b2094dcc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\Scene\Play">
+      <UniqueIdentifier>{0af7a946-bbca-4eb5-8d6e-527c9c9fddf6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -86,9 +86,6 @@
     <ClCompile Include="Project\GameObject\Player\Player.cpp">
       <Filter>Project\GameObject\Player</Filter>
     </ClCompile>
-    <ClCompile Include="Project\Scene\PlayScene\PlayScene.cpp">
-      <Filter>Project\Scene\Play</Filter>
-    </ClCompile>
     <ClCompile Include="Project\GameObject\Player\Bullet\PlayerBullet.cpp">
       <Filter>Project\GameObject\Player\Bullet</Filter>
     </ClCompile>
@@ -104,8 +101,20 @@
     <ClCompile Include="Project\GameObject\Enemy\state\EnemyVerticalState.cpp">
       <Filter>Project\GameObject\Enemy\state</Filter>
     </ClCompile>
-    <ClCompile Include="Project\GameObject\Enemy\state\EnemyDeadState.cpp">
-      <Filter>Project\GameObject\Enemy\state</Filter>
+    <ClCompile Include="Project\Scene\IScene.cpp">
+      <Filter>Project\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Project\Scene\GameClearScene.cpp">
+      <Filter>Project\Scene\Clear</Filter>
+    </ClCompile>
+    <ClCompile Include="Project\Scene\TitleScene.cpp">
+      <Filter>Project\Scene\Title</Filter>
+    </ClCompile>
+    <ClCompile Include="Project\Scene\PlayScene.cpp">
+      <Filter>Project\Scene\Play</Filter>
+    </ClCompile>
+    <ClCompile Include="Project\Scene\GameOverScene.cpp">
+      <Filter>Project\Scene\Over</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -189,9 +198,6 @@
     <ClInclude Include="Project\GameObject\Player\Player.h">
       <Filter>Project\GameObject\Player</Filter>
     </ClInclude>
-    <ClInclude Include="Project\Scene\PlayScene\PlayScene.h">
-      <Filter>Project\Scene\Play</Filter>
-    </ClInclude>
     <ClInclude Include="Project\Scene\IScene.h">
       <Filter>Project\Scene</Filter>
     </ClInclude>
@@ -210,8 +216,17 @@
     <ClInclude Include="Project\GameObject\Enemy\state\EnemyVerticalState.h">
       <Filter>Project\GameObject\Enemy\state</Filter>
     </ClInclude>
-    <ClInclude Include="Project\GameObject\Enemy\state\EnemyDeadState.h">
-      <Filter>Project\GameObject\Enemy\state</Filter>
+    <ClInclude Include="Project\Scene\GameClearScene.h">
+      <Filter>Project\Scene\Clear</Filter>
+    </ClInclude>
+    <ClInclude Include="Project\Scene\TitleScene.h">
+      <Filter>Project\Scene\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="Project\Scene\PlayScene.h">
+      <Filter>Project\Scene\Play</Filter>
+    </ClInclude>
+    <ClInclude Include="Project\Scene\GameOverScene.h">
+      <Filter>Project\Scene\Over</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,5 +1,13 @@
 #pragma once
 
+enum SCENE
+{
+	TITLE,
+	PLAY,
+	CLEAR,
+	OVER
+};
+
 class IScene
 {
 public:
@@ -11,6 +19,9 @@ public:
 
 	virtual void Draw() = 0;
 
-private:
+	int GetStateNumber();
 
+protected:
+
+	static int sceneNo_;
 };

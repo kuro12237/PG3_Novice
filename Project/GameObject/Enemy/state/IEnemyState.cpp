@@ -1,6 +1,6 @@
 #include"IEnemyState.h"
 
-int IEnemyState::stateNo_ = DEAD;
+int IEnemyState::stateNo_ = VERTICALMOVE;
 
 int IEnemyState::GetStateNumber()
 {
