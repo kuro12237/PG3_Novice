@@ -23,7 +23,7 @@ bool InputManager::keyPressed(uint32_t preKeys)
 
 bool InputManager::keyHeld(uint32_t key)
 {
-	if (InputManager::GetInstance()->keys[key] == 0x80)
+	if (InputManager::GetInstance()->keys[key] != 0)
 	{
 		return true;
 	}

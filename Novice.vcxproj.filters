@@ -41,6 +41,18 @@
     <Filter Include="Project\Utility">
       <UniqueIdentifier>{40e0558f-3977-4035-9428-90ebf3eea33b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Project\GameObject\Player">
+      <UniqueIdentifier>{6f7cd7d9-1f74-4885-a58d-a91ec34afda3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\GameObject\Player\Bullet">
+      <UniqueIdentifier>{5844dfce-50d0-478c-938a-6983e0788a1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\GameObject\Enemy">
+      <UniqueIdentifier>{004d8f82-f02b-4d0f-9da5-d509b441f6a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Project\GameObject\Enemy\state">
+      <UniqueIdentifier>{e28e7fb7-2a02-4eb2-abe2-5f4b2094dcc2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\DirectXCommon.cpp">
@@ -70,6 +82,30 @@
     </ClCompile>
     <ClCompile Include="utility\InputManager\InputManager.cpp">
       <Filter>Project\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Project\GameObject\Player\Player.cpp">
+      <Filter>Project\GameObject\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Project\Scene\PlayScene\PlayScene.cpp">
+      <Filter>Project\Scene\Play</Filter>
+    </ClCompile>
+    <ClCompile Include="Project\GameObject\Player\Bullet\PlayerBullet.cpp">
+      <Filter>Project\GameObject\Player\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="Project\GameObject\Enemy\Enemy.cpp">
+      <Filter>Project\GameObject\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Project\GameObject\Enemy\state\IEnemyState.cpp">
+      <Filter>Project\GameObject\Enemy\state</Filter>
+    </ClCompile>
+    <ClCompile Include="Project\GameObject\Enemy\state\EnemyLarteralState.cpp">
+      <Filter>Project\GameObject\Enemy\state</Filter>
+    </ClCompile>
+    <ClCompile Include="Project\GameObject\Enemy\state\EnemyVerticalState.cpp">
+      <Filter>Project\GameObject\Enemy\state</Filter>
+    </ClCompile>
+    <ClCompile Include="Project\GameObject\Enemy\state\EnemyDeadState.cpp">
+      <Filter>Project\GameObject\Enemy\state</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -149,6 +185,33 @@
     </ClInclude>
     <ClInclude Include="utility\InputManager\InputManager.h">
       <Filter>Project\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Project\GameObject\Player\Player.h">
+      <Filter>Project\GameObject\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Project\Scene\PlayScene\PlayScene.h">
+      <Filter>Project\Scene\Play</Filter>
+    </ClInclude>
+    <ClInclude Include="Project\Scene\IScene.h">
+      <Filter>Project\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Project\GameObject\Player\Bullet\PlayerBullet.h">
+      <Filter>Project\GameObject\Player\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Project\GameObject\Enemy\Enemy.h">
+      <Filter>Project\GameObject\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Project\GameObject\Enemy\state\IEnemyState.h">
+      <Filter>Project\GameObject\Enemy\state</Filter>
+    </ClInclude>
+    <ClInclude Include="Project\GameObject\Enemy\state\EnemyLarteralState.h">
+      <Filter>Project\GameObject\Enemy\state</Filter>
+    </ClInclude>
+    <ClInclude Include="Project\GameObject\Enemy\state\EnemyVerticalState.h">
+      <Filter>Project\GameObject\Enemy\state</Filter>
+    </ClInclude>
+    <ClInclude Include="Project\GameObject\Enemy\state\EnemyDeadState.h">
+      <Filter>Project\GameObject\Enemy\state</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
