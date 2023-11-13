@@ -6,7 +6,6 @@ GameManager::GameManager()
 	scene_[TITLE] = std::make_unique<TitleScene>();
 	scene_[PLAY] = std::make_unique<PlayScene>();
 	scene_[CLEAR] = std::make_unique<GameClearScene>();
-	scene_[OVER] = std::make_unique<GameOverScene>();
 
 	currentSceneNo_ = TITLE;
 	scene_[currentSceneNo_]->Initialize();

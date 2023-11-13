@@ -20,7 +20,7 @@ public:
 
 private:
 
-	void CheckCollisions();
+	void CheckCollision();
 
 	bool Collision(Vector2 p1,int s1,Vector2 p2,int s2);
 

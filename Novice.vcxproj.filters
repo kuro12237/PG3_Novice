@@ -29,9 +29,6 @@
     <Filter Include="Project\Scene\Clear">
       <UniqueIdentifier>{226732bb-e5e4-4343-9ab1-a5ea9375ccc5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Project\Scene\Over">
-      <UniqueIdentifier>{2c0133ef-b44e-4076-86c0-84fa7605fc29}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Project\GameManager">
       <UniqueIdentifier>{7c356889-3f2a-4bea-aac3-310954078c00}</UniqueIdentifier>
     </Filter>
@@ -112,9 +109,6 @@
     </ClCompile>
     <ClCompile Include="Project\Scene\PlayScene.cpp">
       <Filter>Project\Scene\Play</Filter>
-    </ClCompile>
-    <ClCompile Include="Project\Scene\GameOverScene.cpp">
-      <Filter>Project\Scene\Over</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -224,9 +218,6 @@
     </ClInclude>
     <ClInclude Include="Project\Scene\PlayScene.h">
       <Filter>Project\Scene\Play</Filter>
-    </ClInclude>
-    <ClInclude Include="Project\Scene\GameOverScene.h">
-      <Filter>Project\Scene\Over</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

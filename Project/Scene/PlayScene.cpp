@@ -14,7 +14,7 @@ void PlayScene::Update()
 	player_->Update();
 	enemy_->Update();
 
-	CheckCollisions();
+	CheckCollision();
 }
 
 void PlayScene::Draw()
@@ -23,23 +23,14 @@ void PlayScene::Draw()
 	enemy_->Draw();
 }
 
-void PlayScene::CheckCollisions()
+void PlayScene::CheckCollision()
 {
-	Vector2 PlayerPos = player_->GetPos();
-	int PlayerSize = player_->GetSize();
-
 	Vector2 PlayerBulletPos = player_->GetBullet()->GetPos();
 	int PlayerBulletSize = player_->GetBullet()->GetSize();
-
 
 	Vector2 EnemyPos = enemy_->GetPos();
 	int EnemySize = enemy_->GetSize();
 	
-	if (Collision(PlayerPos,PlayerSize,EnemyPos,EnemySize))
-	{
-		sceneNo_ = OVER;
-	}
-
 	if (Collision(PlayerBulletPos, PlayerBulletSize, EnemyPos, EnemySize))
 	{
 		sceneNo_ = CLEAR;

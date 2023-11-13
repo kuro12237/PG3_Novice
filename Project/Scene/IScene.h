@@ -4,8 +4,7 @@ enum SCENE
 {
 	TITLE,
 	PLAY,
-	CLEAR,
-	OVER
+	CLEAR
 };
 
 class IScene
