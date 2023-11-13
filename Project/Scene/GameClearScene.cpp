@@ -10,7 +10,6 @@ void GameClearScene::Update()
 	{
 		sceneNo_ = TITLE;
 	}
-
 }
 
 void GameClearScene::Draw()

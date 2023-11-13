@@ -44,8 +44,6 @@ void PlayScene::CheckCollisions()
 	{
 		sceneNo_ = CLEAR;
 	}
-
-
 }
 
 bool PlayScene::Collision(Vector2 p1, int s1, Vector2 p2, int s2)
@@ -56,8 +54,6 @@ bool PlayScene::Collision(Vector2 p1, int s1, Vector2 p2, int s2)
 		{
 			return true;
 		}
-
 	}
-
 	return false;
 }

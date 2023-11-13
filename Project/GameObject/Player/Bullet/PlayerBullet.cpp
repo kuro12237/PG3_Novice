@@ -17,5 +17,4 @@ void PlayerBullet::Draw()
 	{
 		Novice::DrawBox(static_cast<int>(pos_.x), static_cast<int>(pos_.y),size_,size_,0.0f,RED,kFillModeSolid);
 	}
-
 }

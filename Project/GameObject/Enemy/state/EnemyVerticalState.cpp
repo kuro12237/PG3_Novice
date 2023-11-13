@@ -14,7 +14,6 @@ void EnemyVerticalState::Update(Enemy* enemy)
 	}
 
 	Vector2 pos = enemy->GetPos();
-
 	pos.y += speed_;
 
 	//動きの制限

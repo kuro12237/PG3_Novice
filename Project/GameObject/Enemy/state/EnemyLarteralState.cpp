@@ -12,8 +12,8 @@ void EnemyLarteralState::Update(Enemy* enemy)
 	{
 		stateNo_ = VERTICALMOVE;
 	}
-	Vector2 pos = enemy->GetPos();
 
+	Vector2 pos = enemy->GetPos();
 	pos.x += speed_;
 
 	//動きの制限
