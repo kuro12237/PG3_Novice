@@ -19,6 +19,11 @@ void PlayScene::Update()
 
 void PlayScene::Draw()
 {
+	Novice::ScreenPrintf(0, 0, "PlayScene");
+	Novice::ScreenPrintf(0, 20, "PlayerControl : WASD");
+	Novice::ScreenPrintf(0, 40, "PlayerBullet : Space");
+	Novice::ScreenPrintf(0, 60, "KillEnemy : ChangeScene");
+
 	player_->Draw();
 	enemy_->Draw();
 }

@@ -15,4 +15,5 @@ void GameClearScene::Update()
 void GameClearScene::Draw()
 {
 	Novice::ScreenPrintf(0, 0, "ClearScene");
+	Novice::ScreenPrintf(0, 20, "ChangeScene : pushSpace");
 }

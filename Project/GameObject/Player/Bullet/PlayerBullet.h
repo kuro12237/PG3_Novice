@@ -20,6 +20,8 @@ public:
 
 	int GetSize() { return size_; }
 
+	bool GetIsAlive() { return isAlive; }
+
 #pragma endregion
 
 private:
@@ -28,5 +30,5 @@ private:
 	int size_ = 16;
 	float speed_ = 5.0f;
 
-	bool isCollision = false;
+	bool isAlive = false;
 };
