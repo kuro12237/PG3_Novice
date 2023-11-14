@@ -35,7 +35,8 @@ void Player::Move()
 	if (InputManager::onKeyPress(DIK_W))
 	{
 		pos_.y -= speed_.y;
-	}else if (InputManager::onKeyPress(DIK_S))
+	}
+	else if (InputManager::onKeyPress(DIK_S))
 	{
 		pos_.y += speed_.y;
 	}
@@ -44,7 +45,8 @@ void Player::Move()
 	if (InputManager::onKeyPress(DIK_D))
 	{
 		pos_.x += speed_.x;
-	}else if (InputManager::onKeyPress(DIK_A))
+	}
+	else if (InputManager::onKeyPress(DIK_A))
 	{
 		pos_.x -= speed_.x;
 	}
