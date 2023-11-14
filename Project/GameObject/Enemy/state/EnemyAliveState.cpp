@@ -1,17 +1,13 @@
-#include "EnemyLarteralState.h"
+#include "EnemyAliveState.h"
 
-void EnemyLarteralState::Initialize()
+void EnemyAliveState::Initialize()
 {
 	this->stateChangeTimer_ = 0;
 }
 
-void EnemyLarteralState::Update(Enemy* enemy)
+void EnemyAliveState::Update(Enemy* enemy)
 {
 	stateChangeTimer_++;
-	if (stateChangeTimer_ >= stateChangeTimerMax_)
-	{
-		stateNo_ = VERTICALMOVE;
-	}
 
 	Vector2 pos = enemy->GetPos();
 	pos.x += speed_;
@@ -20,6 +16,11 @@ void EnemyLarteralState::Update(Enemy* enemy)
 	if (pos.x <= moveMin_ || pos.x >= moveMax_)
 	{
 		speed_ = speed_ * -1;
+	}
+
+	if (!enemy->GetIsAlive())
+	{
+		stateNo_ = DEAD;
 	}
 
 	enemy->SetPos(pos);

@@ -5,7 +5,6 @@
 #include"utility/InputManager/InputManager.h"
 #include"Bullet/PlayerBullet.h"
 
-
 class Player
 {
 public:

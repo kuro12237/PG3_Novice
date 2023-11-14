@@ -11,10 +11,16 @@ void PlayScene::Initialize()
 
 void PlayScene::Update()
 {
+	
 	player_->Update();
 	enemy_->Update();
 
 	CheckCollision();
+
+	if (!enemy_->GetIsAlive())
+	{
+		//sceneNo_ = CLEAR;
+	}
 }
 
 void PlayScene::Draw()
@@ -30,15 +36,12 @@ void PlayScene::Draw()
 
 void PlayScene::CheckCollision()
 {
-	Vector2 PlayerBulletPos = player_->GetBullet()->GetPos();
-	int PlayerBulletSize = player_->GetBullet()->GetSize();
-
-	Vector2 EnemyPos = enemy_->GetPos();
-	int EnemySize = enemy_->GetSize();
+	PlayerBullet* bullet = player_->GetBullet();
 	
-	if (Collision(PlayerBulletPos, PlayerBulletSize, EnemyPos, EnemySize))
+	if (Collision(bullet->GetPos(), bullet->GetSize(), enemy_->GetPos(), enemy_->GetSize()))
 	{
-		sceneNo_ = CLEAR;
+		enemy_->OnCollision();
+		bullet->OnCollision();
 	}
 }
 

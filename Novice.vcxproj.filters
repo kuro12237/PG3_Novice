@@ -92,10 +92,10 @@
     <ClCompile Include="Project\GameObject\Enemy\state\IEnemyState.cpp">
       <Filter>Project\GameObject\Enemy\state</Filter>
     </ClCompile>
-    <ClCompile Include="Project\GameObject\Enemy\state\EnemyLarteralState.cpp">
+    <ClCompile Include="Project\GameObject\Enemy\state\EnemyAliveState.cpp">
       <Filter>Project\GameObject\Enemy\state</Filter>
     </ClCompile>
-    <ClCompile Include="Project\GameObject\Enemy\state\EnemyVerticalState.cpp">
+    <ClCompile Include="Project\GameObject\Enemy\state\EnemyDeadState.cpp">
       <Filter>Project\GameObject\Enemy\state</Filter>
     </ClCompile>
     <ClCompile Include="Project\Scene\IScene.cpp">
@@ -204,10 +204,10 @@
     <ClInclude Include="Project\GameObject\Enemy\state\IEnemyState.h">
       <Filter>Project\GameObject\Enemy\state</Filter>
     </ClInclude>
-    <ClInclude Include="Project\GameObject\Enemy\state\EnemyLarteralState.h">
+    <ClInclude Include="Project\GameObject\Enemy\state\EnemyAliveState.h">
       <Filter>Project\GameObject\Enemy\state</Filter>
     </ClInclude>
-    <ClInclude Include="Project\GameObject\Enemy\state\EnemyVerticalState.h">
+    <ClInclude Include="Project\GameObject\Enemy\state\EnemyDeadState.h">
       <Filter>Project\GameObject\Enemy\state</Filter>
     </ClInclude>
     <ClInclude Include="Project\Scene\GameClearScene.h">

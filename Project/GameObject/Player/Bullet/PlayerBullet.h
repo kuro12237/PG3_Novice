@@ -14,6 +14,8 @@ public:
 
 	void Draw();
 
+	void OnCollision();
+
 #pragma region Get
 
 	Vector2 GetPos() { return pos_; }

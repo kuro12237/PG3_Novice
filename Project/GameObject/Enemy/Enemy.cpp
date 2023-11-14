@@ -4,10 +4,10 @@ void Enemy::Initialize()
 {
 	pos_ = { 320,128 };
 
-	state_[LATERALMOVE] = std::make_unique<EnemyLarteralState>();
-	state_[VERTICALMOVE] = std::make_unique<EnemyVerticalState>();
+	state_[ALIVE] = std::make_unique<EnemyAliveState>();
+	state_[DEAD] = std::make_unique<EnemyDeadState>();
 
-	currentStateNo_ = VERTICALMOVE;
+	currentStateNo_ = ALIVE;
 	state_[currentStateNo_]->Initialize();
 }
 
@@ -27,4 +27,9 @@ void Enemy::Update()
 void Enemy::Draw()
 {
 	Novice::DrawBox(static_cast<int>(pos_.x), static_cast<int>(pos_.y), size_, size_, 0.0f, color_, kFillModeSolid);
+}
+
+void Enemy::OnCollision()
+{
+	isAlive_ = false;
 }

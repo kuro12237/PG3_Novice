@@ -4,8 +4,8 @@
 #include"Vector2.h"
 
 #include"state/IEnemyState.h"
-#include"state/EnemyLarteralState.h"
-#include"state/EnemyVerticalState.h"
+#include"state/EnemyAliveState.h"
+#include"state/EnemyDeadState.h"
 
 
 class Enemy
@@ -20,6 +20,8 @@ public:
 
 	void Draw();
 
+	void OnCollision();
+
 #pragma region Get
 
 	unsigned int GetColor() { return color_; }
@@ -27,6 +29,8 @@ public:
 	Vector2 GetPos() { return pos_; }
 
 	int GetSize() { return size_; }
+
+	bool GetIsAlive() { return isAlive_; }
 #pragma endregion
 
 #pragma region Set
@@ -36,6 +40,7 @@ public:
 	void SetColor(unsigned int color) { color_ = color; }
 
 #pragma endregion
+
 private:
 
 	Vector2 pos_{};
@@ -47,4 +52,5 @@ private:
 	int currentStateNo_{};
 	int prevStateNo_{};
 	
+	bool isAlive_ = true;
 };

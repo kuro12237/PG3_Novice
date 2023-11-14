@@ -2,8 +2,8 @@
 
 enum ENEMYSTATE
 {
-    LATERALMOVE,
-	VERTICALMOVE,
+	ALIVE,
+	DEAD
 };
 
 class Enemy;

@@ -2,11 +2,11 @@
 #include"IEnemyState.h"
 #include"../Enemy.h"
 
-class EnemyLarteralState:public IEnemyState
+class EnemyAliveState:public IEnemyState
 {
 public:
-	EnemyLarteralState() {};
-	~EnemyLarteralState() {};
+	EnemyAliveState() {};
+	~EnemyAliveState() {};
 
 	void Initialize()override;
 
