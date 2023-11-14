@@ -19,7 +19,7 @@ void PlayScene::Update()
 
 	if (!enemy_->GetIsAlive())
 	{
-		//sceneNo_ = CLEAR;
+		sceneNo_ = CLEAR;
 	}
 }
 
