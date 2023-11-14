@@ -6,7 +6,7 @@ void TitleScene::Initialize()
 
 void TitleScene::Update()
 {
-	if (InputManager::keyPressed(DIK_SPACE))
+	if (InputManager::onKeyPressed(DIK_SPACE))
 	{
 		sceneNo_ = PLAY;
 	}

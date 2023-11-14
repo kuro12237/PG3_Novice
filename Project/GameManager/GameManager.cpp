@@ -36,7 +36,7 @@ int GameManager::Run()
 
 		Novice::EndFrame();
 
-		if (InputManager::keyPressed(DIK_ESCAPE))
+		if (InputManager::onKeyPressed(DIK_ESCAPE))
 		{
 			break;
 		}

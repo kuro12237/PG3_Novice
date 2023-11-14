@@ -12,7 +12,7 @@ void InputManager::BeginFlame()
 	Novice::GetHitKeyStateAll(InputManager::GetInstance()->keys);
 }
 
-bool InputManager::keyPressed(uint32_t preKeys)
+bool InputManager::onKeyPressed(uint32_t preKeys)
 {
 	if (InputManager::GetInstance()->keys[preKeys] == 0 && InputManager::GetInstance()->preKeys[preKeys] != 0)
 	{
@@ -21,7 +21,7 @@ bool InputManager::keyPressed(uint32_t preKeys)
 	return false;
 }
 
-bool InputManager::keyHeld(uint32_t key)
+bool InputManager::onKeyPress(uint32_t key)
 {
 	if (InputManager::GetInstance()->keys[key] != 0)
 	{

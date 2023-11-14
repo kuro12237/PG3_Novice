@@ -6,7 +6,7 @@ void GameClearScene::Initialize()
 
 void GameClearScene::Update()
 {
-	if (InputManager::keyPressed(DIK_SPACE))
+	if (InputManager::onKeyPressed(DIK_SPACE))
 	{
 		sceneNo_ = TITLE;
 	}

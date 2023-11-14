@@ -13,12 +13,12 @@ public:
 	/// <summary>
 	/// 押した瞬間
 	/// </summary>
-	static bool keyPressed(uint32_t key);
+	static bool onKeyPressed(uint32_t key);
 	
 	/// <summary>
 	/// 押し続ける
 	/// </summary>
-	static bool keyHeld(uint32_t key);
+	static bool onKeyPress(uint32_t key);
 
 private:
 
